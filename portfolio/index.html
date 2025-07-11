@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gurulingappa Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="navbar">
+  <div class="nav-container">
+    <div class="nav-logo">Guru.</div>
+    <nav class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#about">About Me</a>
+      <a href="#portfolio">Projects</a>
+      <a href="#certificates">Certificates</a>
+      <a href="./assets/Resume.jpg" download>Resume</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO SECTION -->
+<section class="hero" id="home">
+  <div class="hero-text">
+    <h2>Hey!,</h2>
+    <h1>I’m Gurulingappa</h1>
+    <h2>UI/UX Designer</h2>
+    <p>I’m passionate about <span>UI/UX design</span>, web development, and constantly exploring new tools and ideas.</p>
+    <div class="hero-buttons">
+      <a href="./assets/Resume.jpg" target="_blank">
+        <button>View Resume</button>
+      </a>
+      <a href="#contact">
+        <button>Contact Me</button>
+      </a>
+
+    </div>
+  </div>
+  <img src="./assets/guru mg.jpg" alt="Profile Photo">
+</section>
+
+<!-- ABOUT SECTION -->
+<section class="about-section" id="about">
+  <div class="about-content">
+    <h2>About Me</h2>
+    <p>I’m <span>Gurulingappa</span>, - a frontend developer and UI/UX Designer with 1 year of experience crafting clean, user-focused websites. I blend HTML, CSS, Figma, and creative mindset to build digital experiences that are both functional and visually appealing.</p>
+    <p>Currently a final-year CSE student at GITAM University, I’ve worked on projects in IoT, ML, and UI design, and I’m actively involved as a Graphic Designer in the GQC club and NSS volunteer.</p>
+    <div class="skills">
+      <p><b>Technical Skills:</b> Basics in C++ and Python</p>
+      <p><b>Web:</b> HTML, CSS and Figma</p>
+      <p><b>Soft Skills:</b> Communication, Team Management</p>
+    </div>
+  </div>
+</section>
+
+<!-- PORTFOLIO SECTION -->
+<section class="portfolio-section" id="portfolio">
+  <h2>My Portfolio</h2>
+  <div class="project">
+    <img src="./assets/Plant disease.png" alt="Plant Disease Detection"/>
+    <div class="project-description">
+      <div class="project-title">Plant Disease Detection</div>
+      Uses machine learning to identify plant diseases from leaf images, enabling early diagnosis and better crop health.
+    </div>
+  </div>
+  <div class="project reverse">
+    <img src="./assets/Digital agency .png" alt="Digital Agency UI"/>
+    <div class="project-description">
+      <div class="project-title">Digital Agency UI</div>
+      A modern digital agency portfolio showcasing creative UI/UX design and cutting-edge mobile app projects.
+    </div>
+  </div>
+  <div class="project">
+    <img src="./assets/wrong way detection.png" alt="Wrong Way Detection"/>
+    <div class="project-description">
+      <div class="project-title">Wrong Way Detection</div>
+      Detects wrong-way vehicles using IoT sensors and triggers alerts for real-time road safety.
+    </div>
+  </div>
+</section>
+
+<!-- CERTIFICATES SECTION -->
+<section class="certificates-section" id="certificates">
+  <h2>Certificates</h2>
+  <div class="certificates-container">
+    <img src="./assets/UI UX certificate.jpg" alt="Certificate 1">
+    <img src="./assets/SIH crtft.png" alt="Certificate 2">
+    <img src="./assets/python certificate.png" alt="Certificate 3">
+    <img src="./assets/English crtft.png" alt="Certificate 4">
+  </div>
+  <a href="./assets/Resume.jpg" download class="download-btn">Download Resume</a>
+</section>
+
+<!-- CONTACT SECTION -->
+<section class="contact-section" id="contact">
+  <div class="contact-title">
+    <h2>Let's Connect</h2>
+    <p>Together we make impact</p>
+  </div>
+  <div class="contact-container">
+    <div class="contact-info">
+      <p>📧 <a href="mailto:guruhugar6777@gmail.com">guruhugar6777@gmail.com</a></p>
+      <p>📞 +91 9742416777</p>
+      <p>📍 Bangalore Rural, Karnataka</p>
+      <div class="contact-icons">
+          <a href="https://www.linkedin.com/in/guru-hugar-0b028825b/"><img src="https://img.icons8.com/ios-filled/24/linkedin.png" alt="LinkedIn"/></a>
+          <a href="https://github.com/Guru677"><img src="https://img.icons8.com/ios-filled/24/github.png" alt="GitHub"/></a>
+          <a href="mailto:guruhugar6777@gmail.com" target="_blank">
+            <img src="https://img.icons8.com/ios-filled/24/email.png" alt="Email"/>
+          </a>
+          <a href="https://wa.me/919742416777" target="_blank">
+             <img src="https://img.icons8.com/ios-filled/24/whatsapp.png" alt="WhatsApp"/>
+          </a>
+
+        </div>
+    </div>
+    <form class="contact-form">
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your email" required />
+      <textarea placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <p>© 2025 Guru. All rights are deserved</p>
+</footer>
+
+<script>
+  const sections = document.querySelectorAll("section");
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15 });
+
+  sections.forEach(section => observer.observe(section));
+</script>
+
+</body>
+</html>
