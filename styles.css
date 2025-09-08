@@ -1,0 +1,381 @@
+html {
+      scroll-behavior: smooth;
+    }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #ddd;
+      color: #111;
+    }
+
+    section {
+      padding: 80px 120px;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s ease;
+    }
+
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background-color: rgba(170, 170, 170, 0.6);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0 120px;
+      height: 100px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .nav-container {
+      width: 100%;
+      max-width: 1440px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav-logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .menu-toggle div {
+      width: 25px;
+      height: 3px;
+      background-color: #000;
+      margin: 4px 0;
+    }
+
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: flex;
+      }
+    }
+    .nav-links {
+      display: flex;
+      gap: 30px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 500;
+      color: #000;
+    }
+    /* Add this to your existing style.css file */
+
+    .nav-links a.active {
+        font-weight: bold;
+        /* If you also want a different color for the active link, add it here.
+          Otherwise, omit the color line. */
+        color: #c92b2b; 
+    }
+    .hero {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .hero-text {
+      max-width: 600px;
+    }
+
+    .hero h2 {
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .hero h1 {
+      font-size: 48px;
+      margin: 10px 0;
+      color: #874D68;
+    }
+
+    .hero p {
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    .hero span {
+      color: #874D68;
+      font-weight: 500;
+    }
+
+    .hero-buttons {
+      margin-top: 25px;
+    }
+
+    .hero-buttons button {
+      padding: 10px 20px;
+      margin-right: 10px;
+      font-size: 14px;
+      border: none;
+      background-color: #1c1c36;
+      color: #fff;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    .hero img {
+      width: 420px;
+      height: 450px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 6px solid #eee;
+    }
+
+    .about-content h2,
+    .portfolio-section h2,
+    .certificates-section h2,
+    .contact-title h2 {
+      font-size: 28px;
+      margin-bottom: 15px;
+    }
+
+    .about-content p,
+    .project-description,
+    .contact-info p,
+    .contact-title p {
+      font-size: 20px;
+      line-height: 1.6;
+    }
+
+    .project {
+      display: flex;
+      align-items: center;
+      margin-bottom: 50px;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    .project img {
+      width: 670px;
+      height: 530px;
+      border-radius: 10px;
+      object-fit: cover;
+      box-shadow: 3px 3px 6px #aaa;
+    }
+
+    .project-description {
+      max-width: 400px;
+    }
+
+    .project-title {
+      font-weight: bold;
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .project.reverse {
+      flex-direction: row-reverse;
+    }
+
+    .certificates-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .certificates-container img {
+      width: 325px;
+      height: 275px;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 2px 2px 6px #888;
+    }
+
+    .download-btn {
+      /* Your existing styles */
+      margin-top: 40px;
+      padding: 12px 30px;
+      background-color: #1c1c36;
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      font-size: 16px;
+      cursor: pointer;
+      text-decoration: none;
+      display: block; 
+      width: fit-content; 
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .contact-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+    }
+
+    .contact-info {
+      flex: 1;
+    }
+
+    .contact-form {
+      flex: 1;
+      background-color: #d6c8c8;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 3px 3px 10px #888;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 20px;
+      border: none;
+      border-radius: 6px;
+      font-size: 14px;
+      background-color: #fff;
+    }
+
+    .contact-form button {
+      padding: 10px 25px;
+      background-color: #1c1c36;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    .footer {
+      background-color: #aaa;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    @media (max-width: 768px) {
+      .navbar {
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
+      }
+
+      .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .hero,
+      .project,
+      .contact-container {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .hero img {
+        width: 320px;
+        height: 340px;
+      }
+
+      section {
+        padding: 40px 20px;
+      }
+
+      .project img {
+        width: 100%;
+        height: auto;
+      }
+    }
+    .interactive-item {
+      /* Default styles */
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .interactive-item:hover {
+      background-color: #eee;
+      transform: scale(1.05); /* Enlarge slightly on hover */
+      cursor: pointer; /* Make sure the default cursor changes to a hand */
+    }
+    /* 🌟 Global smooth transition setup */
+    :root {
+    --transition-speed: 0.4s;
+    --transition-ease: cubic-bezier(0.22, 1, 0.36, 1); /* smooth and natural */
+    }
+
+    /* Apply transitions globally (safe properties only) */
+    *,
+    *::before,
+    *::after {
+    transition: background-color var(--transition-speed) var(--transition-ease),
+                color var(--transition-speed) var(--transition-ease),
+                border-color var(--transition-speed) var(--transition-ease),
+                box-shadow var(--transition-speed) var(--transition-ease),
+                transform var(--transition-speed) var(--transition-ease),
+                opacity var(--transition-speed) var(--transition-ease);
+    }
+
+    /* Section fade-in (already in your code, just refined) */
+    section {
+    padding: 80px 120px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+    section.visible {
+    opacity: 1;
+    transform: translateY(0);
+    }
+
+    /* Navbar links hover effect */
+    .nav-links a {
+    position: relative;
+    }
+    .nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0%;
+    height: 2px;
+    background: #c92b2b;
+    transition: width 0.3s ease;
+    }
+    .nav-links a:hover::after,
+    .nav-links a.active::after {
+    width: 100%;
+    }
+
+    /* Buttons hover */
+    .hero-buttons button,
+    .download-btn,
+    .contact-form button {
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+    .hero-buttons button:hover,
+    .download-btn:hover,
+    .contact-form button:hover {
+    transform: translateY(-3px) scale(1.03);
+    background-color: #333;
+    }
+
+    /* Project image hover lift */
+    .project img,
+    .certificates-container img {
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+    .project img:hover,
+    .certificates-container img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    }
